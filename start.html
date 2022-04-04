@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Esercizio form</title>
+	<style>
+		label {
+			display: block
+		}
+		
+	</style>
+</head>
+
+<body>
+	<form action="#" method="get">
+		<fieldset>
+			<legend>Credenziali</legend>
+			<label class="required" for="email">Email:</label>
+			<input type="email" name="email" id="email" placeholder="your.email@hotmail.com"/>
+			
+			<label for="password">Password:</label>
+			<input type="password" name="password" id="password" placeholder="password" required />
+			
+			<label for="name">Nome e cognome:</label>
+			<input type="text" name="name" id="name" placeholder="nome e cognome" required />
+			
+			<label for="birthday">Data di nascita:</label>
+			<input type="date" name="birthday" id="birthday" required />
+			
+			<label for="phone">Numero di cellulare:</label>
+			<input type="tel" name="phone" id="phone" placeholder="1234567890" required />
+			
+
+		</fieldset>
+		<fieldset>
+			<legend>Piano di abbonamento e dati carta di credito</legend>
+
+			<select name="abbonamento" id="abbonamento">
+				<option value="free">Gratuito</option>
+				<option value="monthly">Abbonamento mensile PLUS 4,99€ al mese</option>
+				<option value="yearly">Abbonamento annuall PLUS 39,99€ l'anno</option>
+			</select>
+            <h3>Vuoi ottenere i film in anticipo? Acquista i vantaggi Pro!</h3>
+            
+			<label for="pro">Diventa un pro! Costo:20€. Durata per sempre! 
+			<input type="checkbox" name="pro" id="pro" /> </label>
+			
+			
+			<label for="numero-carta">Numero carta di credito:</label>
+			<input type="text" name="numero-carta" id="numero-carta" pattern="[0-9]{12-16}" placeholder="123456789012" />
+			
+			<label for="cvc-carta">CVC della carta:</label>
+			<input type="number" name="cvc-carta" id="cvc-carta" pattern="[0-9]" max="999" min="100" placeholder="666" required />
+			
+			<label for="data-scadenza-carta">Data di scadenza della carta:</label>
+			<input type="month" name="data-scadenza-carta" id="data-scadenza-carta" required />
+			
+            <label for="Indirizzo-fatturazione">Indirizzo di fatturazione:</label>
+			<textarea name="Indirizzo-fatturazione" id="Indirizzo-fatturazione" rows="1" cols="100" 
+			              placeholder="Inserire indirizzo di fatturazione" required></textarea>		
+					</fieldset>
+					<button type="submit">Invia dati</button>
+	</form>
+
+</body>
+
+</html>
